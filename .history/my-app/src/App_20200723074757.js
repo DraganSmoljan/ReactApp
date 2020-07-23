@@ -5,15 +5,14 @@ import getWeather from "./adapters/openweathermap.adapter";
 function App() {
   let obj;
   useEffect(() => {
-    let obj = getWeather();
+    let obj = getWeather()
     let weatherObject ={
       weather: obj.weather,
       main: obj.main,
       wind: obj.wind
-    }
+    } 
   }, []);
  
-
 
   console.log(weatherObject.main)
   return (
