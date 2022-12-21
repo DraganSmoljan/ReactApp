@@ -1,21 +1,29 @@
 import { useEffect, useState } from 'react';
-import './App.css';
-
 import getWeather from "./adapters/openweathermap.adapter"
+import City from './components/City';
+import Layout from './components/Layout';
+import { Wrapper } from './style/weatherApp.style';
+
+
 
 function App() {
   
   const [ weatherData, setWeatherData] = useState({});
 
   useEffect(() => {
-   setWeatherData(getWeather()) ;
-  }, []);
-console.log("weather", weatherData);
-
+    getWeather().then(data => setWeatherData(data));
+  },[]);
+  console.log("data",weatherData)
   return (
-    <div>
-      <p>hello world</p>
-    </div>
+      <Wrapper>
+       <City name = {weatherData.name}
+            // weather = {weatherData.weather[0].description}
+            // icon = {weatherData.weather[0].icon}
+             
+        /> 
+        <City/>
+        <Layout/>
+      </Wrapper>
   );
 }
 
