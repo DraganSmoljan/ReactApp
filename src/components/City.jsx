@@ -1,11 +1,10 @@
 function City({ name, weather, icon}) {
   return (
     <div>
-        hello
-       {/*  {name}, {weather}
+         {name}, {weather}
         <div>
             {icon}
-        </div> */}
+        </div> 
     </div>
   )
 }
