@@ -14,5 +14,26 @@ const Wrapper = styled.div `
 
 `;
 
+const Main = styled.div `
+    display:flex;
+    flex-direction: column;
 
-export { Wrapper };
+    .city-info, .weather-info {
+        display:flex;
+        justify-content:space-between;
+    }  
+
+    .weather-info {
+        h2 {
+            font-weight: 400;
+            font-size: 5rem;
+            margin: 0;
+        }
+
+        ul {
+            list-style:none;
+        }
+    }
+`;
+
+export { Wrapper, Main };
