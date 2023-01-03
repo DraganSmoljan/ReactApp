@@ -10,6 +10,7 @@
     "@testing-library/user-event": "^12.5.0",
     "autoprefixer": "^10.2.4",
     "axios": "^1.2.1",
+    "degrees-to-direction": "^1.1.1",
     "framer-motion": "^4.1.17",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
@@ -17,6 +18,7 @@
     "react-router-dom": "^6.4.5",
     "react-scripts": "4.0.1",
     "styled-components": "^5.3.6",
+    "temperature-unit-converter-ctof-ftoc": "^1.0.3",
     "web-vitals": "^0.2.4"
   },
   "scripts": {

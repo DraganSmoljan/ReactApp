@@ -1,6 +1,8 @@
-function Layout() {
+function Layout({children}) {
   return (
-    <div>Layout</div>
+    <>
+    <div>{children}</div>
+    </>
   )
 }
 
