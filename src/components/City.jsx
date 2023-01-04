@@ -1,16 +1,23 @@
-import { Main } from "../style/weatherApp.style"
+import { WeatherCard, Main } from "../style/weatherApp.style";
+import FutureWeathers from "./FutureWeathers";
+import fortawesome from '@fortawesome/fontawesome';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSquarePlus, faSquareMinus } from '@fortawesome/free-solid-svg-icons';
+import { useState } from "react";
 
 function City(props) {
   const d2d = require('degrees-to-direction');
   const windDirection = d2d(props.wind.deg);
   const iconSrc = `http://openweathermap.org/img/wn/${props.weather.icon}.png`;
 
+  const [forecast, setForecast] = useState({});
+  const [toggle, setToggle] = useState(false);
+  fortawesome.library.add(faSquarePlus, faSquareMinus);
   return (
     <>
      <Main>
       <div className="city-info">
-        <p> {props.name}, {props.weather.description}
-        </p>
+        <p> {props.name}, {props.weather.description}</p>
         <img src={iconSrc} width="50px" height="50px" alt=""></img>
         </div>
         <div className="weather-info">
@@ -24,6 +31,14 @@ function City(props) {
             <li>Wind: {props.wind.speed} km/h, {windDirection} </li>
           </ul>
           </div>
+          <WeatherCard>
+            <FontAwesomeIcon icon={ toggle === false ? faSquarePlus : faSquareMinus }
+            onClick={() => setToggle(!toggle)} />
+            {}
+            <FutureWeathers className={toggle === false ? "hidden" : "show"}>
+              return
+            </FutureWeathers>
+          </WeatherCard>
         </Main>
     </>
   )

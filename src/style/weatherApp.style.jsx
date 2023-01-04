@@ -11,9 +11,24 @@ const Wrapper = styled.div `
     border-radius: 2rem;
     background: transparent;
     color: white;
-
 `;
 
+
+const WeatherCard = styled.div `
+    display: flex;
+    flex-direction:column;
+
+    svg {
+        align-self: end;
+        margin-right: 2rem;
+    }
+    .hidden {
+        display: none;
+    }
+    .show {
+        display:block;
+    }
+`;
 const Main = styled.div `
     display:flex;
     flex-direction: column;
@@ -34,6 +49,9 @@ const Main = styled.div `
             list-style:none;
         }
     }
+    .toggle {
+        content: ""
+    }
 `;
 
-export { Wrapper, Main };
+export { Wrapper, Main, WeatherCard };

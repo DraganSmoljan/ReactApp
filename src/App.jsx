@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import getWeather from "./adapters/openweathermap.adapter"
 import City from './components/City';
 import Layout from './components/Layout';
-import { Main, Wrapper } from './style/weatherApp.style';
+import { Wrapper } from './style/weatherApp.style';
 
 
 
