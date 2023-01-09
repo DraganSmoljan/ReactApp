@@ -1,16 +1,12 @@
-import { Main } from "../style/weatherApp.style"
-
 function City(props) {
   const d2d = require('degrees-to-direction');
   const windDirection = d2d(props.wind.deg);
   const iconSrc = `http://openweathermap.org/img/wn/${props.weather.icon}.png`;
-
+ 
   return (
     <>
-     <Main>
       <div className="city-info">
-        <p> {props.name}, {props.weather.description}
-        </p>
+        <p> {props.name}, {props.weather.description}</p>
         <img src={iconSrc} width="50px" height="50px" alt=""></img>
         </div>
         <div className="weather-info">
@@ -24,7 +20,6 @@ function City(props) {
             <li>Wind: {props.wind.speed} km/h, {windDirection} </li>
           </ul>
           </div>
-        </Main>
     </>
   )
 }
