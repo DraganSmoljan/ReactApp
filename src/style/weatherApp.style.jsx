@@ -16,7 +16,6 @@ const Wrapper = styled.div `
 const Forecast = styled.div `
     border: 2px solid white;
     border-radius: 1rem;
-    min-height:17rem;
 `;
 
 const FormStyle = styled.form`
@@ -69,12 +68,6 @@ const Main = styled.div `
         justify-content:space-between;
     }  
 
-    .weather {
-        margin-left: 1rem;
-    }
-    .mrl-xs {
-        
-    }
     .weather-info {
         h2 {
             font-weight: 400;
@@ -86,9 +79,16 @@ const Main = styled.div `
             list-style:none;
         }
     }
-    .toggle {
-        content: ""
+    .weather {
+        &>p {
+            margin-left:1rem;
+        }
+        .forecast {
+            display: flex;
+            justify-content: space-around;
+        }
     }
+    
 `;
 
 export { Wrapper, Main, WeatherCard, Forecast, FormStyle };
