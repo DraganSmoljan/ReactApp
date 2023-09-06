@@ -7,11 +7,11 @@ function Search() {
 
   const [input, setInput] = useState("");
   
- // const navigate = useNavigate();
+  const navigate = useNavigate();
 
   const submitHandler = (e) => {
     e.preventDefault();
-  //  navigate('/searched/' + input);
+    navigate('/searched/' + input);
   }    
   return (
     <FormStyle onSubmit={submitHandler}> 
